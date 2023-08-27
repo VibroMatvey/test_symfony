@@ -27,6 +27,7 @@ api_platform:
         type: header
   # Good cache defaults for REST APIs
   defaults:
+    formats: ['json', 'jsonld']
     stateless: true
     cache_headers:
       vary: [ 'Content-Type', 'Authorization', 'Origin' ]
