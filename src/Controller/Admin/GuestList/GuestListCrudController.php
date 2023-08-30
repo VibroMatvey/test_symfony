@@ -18,6 +18,13 @@ class GuestListCrudController extends AbstractCrudController
         return GuestList::class;
     }
 
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setEntityLabelInSingular('Гость')
+            ->setEntityLabelInPlural('Гости');
+    }
+
 
     public function configureFields(string $pageName): iterable
     {

@@ -19,6 +19,13 @@ class TablesCrudController extends AbstractCrudController
         return Tables::class;
     }
 
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setEntityLabelInSingular('Стол')
+            ->setEntityLabelInPlural('Столы');
+    }
+
     public function configureFields(string $pageName): iterable
     {
         $id = IdField::new('id');
