@@ -181,6 +181,6 @@ class Tables
 
     public function __toString()
     {
-        return 'Стол ' . $this->getId();
+        return 'Стол ' . $this->getNum();
     }
 }
