@@ -31,6 +31,7 @@ class TableStatController
                 'id' => $table->getId(),
                 'num' => $table->getNum(),
                 'maxGuests' => $table->getMaxGuests(),
+                'booking' => $table->getGuestsDef(),
                 'guestIsPresent' => $usersCount
             ];
         }
