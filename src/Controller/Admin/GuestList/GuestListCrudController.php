@@ -3,6 +3,8 @@
 namespace App\Controller\Admin\GuestList;
 
 use App\Entity\GuestList;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
@@ -22,7 +24,17 @@ class GuestListCrudController extends AbstractCrudController
     {
         return $crud
             ->setEntityLabelInSingular('Гость')
-            ->setEntityLabelInPlural('Гости');
+            ->setEntityLabelInPlural('Гости')
+            ->setPageTitle(Crud::PAGE_NEW, 'Добавление гостя')
+            ->setPageTitle(Crud::PAGE_EDIT, 'Изменение гостя');
+    }
+
+    public function configureActions(Actions $actions): Actions
+    {
+        return $actions
+            ->update(Crud::PAGE_INDEX, Action::NEW, function (Action $action) {
+                return $action->setLabel('Добавить гостя');
+            });
     }
 
 
