@@ -10,7 +10,6 @@ use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\Patch;
 use App\Repository\GuestListRepository;
-use App\Validator\Constraints\MaxGuests;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
@@ -43,7 +42,6 @@ class GuestList
     private ?bool $isPresent = null;
 
     #[ORM\ManyToOne(inversedBy: 'tables')]
-    #[MaxGuests]
     #[Groups(['guest:list', 'guest:item'])]
     private ?Tables $tables = null;
 
