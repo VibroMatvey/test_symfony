@@ -72,7 +72,7 @@ class Tables
     #[Groups(['tables:list', 'tables:item', 'guest:item', 'guest:list'])]
     private ?int $guestsNow = 0;
 
-    #[ORM\OneToMany(mappedBy: 'tables', targetEntity: GuestList::class)]
+    #[ORM\OneToMany(mappedBy: 'tables', targetEntity: GuestList::class, cascade: ['persist'])]
     #[Groups(['tables:list', 'tables:item'])]
     #[SerializedName("guests")]
     private Collection $tables;
