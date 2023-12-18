@@ -44,7 +44,7 @@ class GuestListCrudController extends AbstractCrudController
         $isPresent = BooleanField::new('isPresent', 'Присутствие');
         $name = TextField::new('name', 'ФИО');
         $tables = AssociationField::new('tables', 'Стол');
-//test2
+//test3
         if (Crud::PAGE_INDEX === $pageName) {
             return [$id, $isPresent, $name, $tables];
         } elseif (Crud::PAGE_DETAIL === $pageName) {
