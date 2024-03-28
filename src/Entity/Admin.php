@@ -13,6 +13,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
 #[UniqueEntity(fields: ['username'], message: 'There is already an account with this username')]
 class Admin implements UserInterface, PasswordAuthenticatedUserInterface
 {
+    public const ROLES = [
+        'Администратор' => 'ROLE_ADMIN',
+    ];
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
