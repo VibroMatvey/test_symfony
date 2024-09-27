@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="9ccf43a1-b542-4082-9b1f-c1bcb53fbdd8" name="ubiley">
-        <fileTransfer rootFolder="/home/shared-backend/web/ubiley.itlabs.top/public_html" accessType="SFTP" host="94.181.95.94" port="22" sshConfigId="1f8fdd21-472d-4878-8405-b03e2eb42135" sshConfig="shared-backend@94.181.95.94:22 password">
+        <fileTransfer rootFolder="/home/shared-backend/web/back-end.test.itlabs.top/public_html" accessType="SFTP" host="94.181.95.94" port="22" sshConfigId="1f8fdd21-472d-4878-8405-b03e2eb42135" sshConfig="shared-backend@94.181.95.94:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
