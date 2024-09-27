@@ -49,4 +49,4 @@ hooks:
         symfony-deploy
 
 relationships:
-    database: "database:mariadb"
+    database: "database:mysql"
