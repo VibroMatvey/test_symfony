@@ -9,6 +9,7 @@ runtime:
         - sodium
         - ctype
         - iconv
+        - pdo_mysql
         
 
 #variables:
@@ -48,4 +49,4 @@ hooks:
         symfony-deploy
 
 relationships:
-    database: "mysql:mysql"
+    database: "database:mariadb"
